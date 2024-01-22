@@ -1,5 +1,5 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
 
-def message_view(request):
-    return HttpResponse("<h1>Hello Django!</h1>")
+def view_message(request):
+    return render(request, 'home.html')
