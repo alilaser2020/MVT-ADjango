@@ -1,11 +1,17 @@
 # Django basic project
 ## Required modules:
 **django**
+
 *from django.http import HttpResponse*
+
 *from django.urls import path, include*
+
 *from django.shortcuts import render*
+
 *from django.views import View*
+
 *from django.views.generic import TemplateView*
+
 *from django.test import SimpleTestCase*
 
 ### Install command:

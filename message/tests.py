@@ -1,3 +1,7 @@
-from django.test import TestCase
+from django.test import SimpleTestCase
 
-# Create your tests here.
+
+class MessagePageTest(SimpleTestCase):
+    def test_exist_url_at_correct_location(self):
+        response = self.client.get('/message/')
+        self.assertEqual(response.status_code, 200)
