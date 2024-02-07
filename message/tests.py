@@ -1,8 +1,8 @@
-from django.test import SimpleTestCase
+from django.test import TestCase
 from django.urls import reverse
 
 
-class MessagePageTest(SimpleTestCase):
+class MessagePageTest(TestCase):
     def test_exist_url_at_correct_location(self):
         response = self.client.get('//')
         self.assertEqual(response.status_code, 200)
@@ -17,4 +17,4 @@ class MessagePageTest(SimpleTestCase):
 
     def test_template_content(self):
         response = self.client.get('//')
-        self.assertContains(response, "<h1>Hello Django!</h1>")
+        self.assertContains(response, "<li>1th Hi, Django to DB</li>")

@@ -1,5 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Hello Django!</h1>
+    <div class="container">
+        {% for msg in message_list %}
+            <a href="#" class="list-group-item list-group-item-action">{{msg.text}}</a>
+        {% endfor %}
+    </div>
 {% endblock content %}
+
+<!--<div class="list-group">-->
+<!--  <a href="#" class="list-group-item list-group-item-action active">Cras justo odio</a>-->
+<!--  <a href="#" class="list-group-item list-group-item-action disabled">Morbi leo risus</a>-->
+<!--</div>-->
